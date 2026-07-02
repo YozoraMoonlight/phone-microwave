@@ -1,0 +1,22 @@
+# Dependencies
+node_modules/
+**/node_modules/
+
+# Build output
+dist/
+**/dist/
+*.log
+
+# Secrets — never commit real API keys
+.env
+**/.env
+.env.local
+
+# LiveKit binary: platform-specific and ~53 MB. Not committed.
+# Re-download from https://github.com/livekit/livekit/releases (see README).
+livekit/livekit-server
+livekit/livekit-server.exe
+
+# Local tooling / scratch — not part of the project
+.claude/
+vid.txt

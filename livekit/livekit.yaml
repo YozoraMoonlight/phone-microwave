@@ -1,0 +1,29 @@
+# LiveKit server config for Mirai.
+#
+# LOCAL DEV: you don't need this file — just run `livekit-server.exe --dev`,
+# which uses the built-in devkey/secret on port 7880.
+#
+# GOING ONLINE: use this config instead of --dev. Generate real keys first:
+#     .\livekit-server.exe generate-keys
+# then paste them into `keys` below and point mirai/server/.env at the same
+# key/secret. Run with:
+#     .\livekit-server.exe --config livekit.yaml
+
+port: 7880
+
+# WebRTC media ports. For a public server these must be reachable from the
+# internet — open them on your firewall / cloud security group.
+rtc:
+  tcp_port: 7881
+  port_range_start: 50000
+  port_range_end: 60000
+  # Set to your server's PUBLIC IP when deploying (leave commented for local).
+  # use_external_ip: true
+
+# API key / secret pairs. Replace with your generated keys before going online.
+# These placeholders match `--dev` so nothing breaks if you forget locally.
+keys:
+  devkey: secret
+
+logging:
+  level: info

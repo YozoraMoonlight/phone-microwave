@@ -1,0 +1,17 @@
+{
+  "name": "mirai",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Mirai Note — Steins;Gate themed group video call (self-contained)",
+  "scripts": {
+    "postinstall": "npm --prefix client install && npm --prefix server install",
+    "livekit": "livekit\\livekit-server.exe --dev",
+    "server": "npm --prefix server start",
+    "client": "npm --prefix client run dev",
+    "dev": "concurrently -n LIVEKIT,SERVER,CLIENT -c magenta,cyan,green \"npm:livekit\" \"npm:server\" \"npm:client\"",
+    "build": "npm --prefix client run build"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.0"
+  }
+}
