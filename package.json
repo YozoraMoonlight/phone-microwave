@@ -1,8 +1,8 @@
 {
-  "name": "mirai",
+  "name": "phone-microwave",
   "version": "0.1.0",
   "private": true,
-  "description": "Mirai Note — Steins;Gate themed group video call (self-contained)",
+  "description": "Phone Microwave — FGL Comms Link, a Steins;Gate themed group video call (self-contained)",
   "scripts": {
     "postinstall": "npm --prefix client install && npm --prefix server install",
     "livekit": "livekit\\livekit-server.exe --dev",
